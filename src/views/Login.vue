@@ -89,7 +89,7 @@ export default {
           this.guardarUsuario(token);
         })
         .catch(err => {
-          console.log(err.response);
+          //console.log(err.response);
           this.mensaje = err.response.data.mensaje;
         });
     },
