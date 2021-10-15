@@ -3,11 +3,26 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/login">Login</router-link>
+      <router-link to="/login" v-if="!estadoActivo">Login</router-link> |
+      <a @click="cerrarSeccion()" v-if="estadoActivo">Cerrar Seccion</a>
       </div>
     <router-view/>
   </div>
 </template>
+<script>
+ import {mapActions,mapGetters} from 'vuex'
+export default {
+  methods:{
+    ...mapActions(['cerrarSeccion'])
+  },
+  computed:{
+    ...mapGetters(['estadoActivo'])
+  }
+  
+ 
+}
+</script>
+
 
 <style>
 #app {
