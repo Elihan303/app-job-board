@@ -16,15 +16,21 @@ const router = new Router({
       meta: {requireAuth: true}
     },
     {
-      path: '/about',
-      name: 'About',
-      component: () => import('../views/About.vue')
-    },
-    {
       path: '/login',
       name: 'Login',
       component: () => import( '../views/Login.vue')
+    },
+    {
+      path: '/registro',
+      name: 'Registro',
+      component: () => import( '../views/Registro.vue')
+    },
+    {
+      path: '/detalles',
+      name: 'Detalles',
+      component: () => import( '../views/Detalles.vue')
     }
+
 
   ]
 }) 
